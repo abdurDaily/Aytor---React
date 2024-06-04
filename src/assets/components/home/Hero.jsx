@@ -1,9 +1,17 @@
 
 import React from 'react';
+import Slider from './Slider';
 
 const Hero = () => {
     return (
         <>
+
+
+         {/* BANNER START */}
+         <Slider />
+         {/* BANNER END */}
+
+
           <section className='my-5 home-product'>
                 <div className="container">
                     <div className="row ">

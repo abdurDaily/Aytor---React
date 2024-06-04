@@ -5,13 +5,21 @@ import 'bootstrap/dist/js/bootstrap.bundle';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars,faMagnifyingGlass, faHeart, faBagShopping} from '@fortawesome/free-solid-svg-icons';
 
+let nav = document.querySelector('.navbar');
+window.addEventListener('scroll',function(){
+  if(window.scrollY > 200){
+    // this.alert('io')
+    // console.log(window.scrollY);
+    nav.classList.add('nav_active');
+  }
+});
 
 
 
 const Navbar = () => {
     return (
         <>
-            <nav className="navbar shadow navbar-expand-lg bg-body-tertiary">
+            <nav className="navbar shadow navbar-expand-lg" style={{ background:'#fff' }}>
             <div className="container">
                 <a className="navbar-brand" href="#">
                     <img src="public/images/home/logo.png" alt="" />

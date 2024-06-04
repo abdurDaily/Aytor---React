@@ -5,6 +5,7 @@ import Hero from './assets/components/home/Hero'
 import Footer from './assets/components/home/Footer'
 import About from './assets/components/home/About'
 import './App.css';
+import Slider from './assets/components/home/Slider'
 
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
     <BrowserRouter>
     <Navbar />
 
+  
 
 
 
