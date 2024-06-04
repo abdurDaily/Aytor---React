@@ -3,7 +3,11 @@ import { Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHouse ,faBars} from '@fortawesome/free-solid-svg-icons'
+import { faBars,faMagnifyingGlass, faHeart, faBagShopping} from '@fortawesome/free-solid-svg-icons';
+
+
+
+
 const Navbar = () => {
     return (
         <>
@@ -12,24 +16,48 @@ const Navbar = () => {
                 <a className="navbar-brand" href="#">
                     <img src="public/images/home/logo.png" alt="" />
                 </a>
+
+                <div className="me-4 d-lg-none d-md-block mobile" >
+                    <ul className='test'>
+                        <li className='shop'>   
+                            <span>0</span>
+                            <FontAwesomeIcon icon={faBagShopping}></FontAwesomeIcon>
+                        </li>
+                    </ul>
+                </div>
+                
                 <FontAwesomeIcon icon={faBars} data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"  className="me-4 d-lg-none d-md-block" style={{ fontSize: '20px', cursor:"pointer" }} aria-expanded="false" aria-label="Toggle navigation" />
 
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul className="navbar-nav m-auto mb-2 mb-lg-0">
+                <ul className="navbar-nav m-auto ">
                     <li className="nav-item">
                         <Link className='nav-link active' to="/hero">Home</Link> 
                     </li>
                     <li className="nav-item">
-                        <Link className='nav-link active' to="/about">About</Link> 
+                        <Link className='nav-link' to="/about">About</Link> 
                     </li>
-                    <li className="nav-item">
-                     <Link className='nav-link' to="/footer">Footer</Link>
+                    
+                </ul>
+
+
+                <ul className='test d-none d-lg-block'>
+                    
+                    <li ><FontAwesomeIcon icon={faMagnifyingGlass} /></li>
+                    <li><FontAwesomeIcon icon={faHeart} /></li>
+                    <li className='shop'>   
+                           <span>0</span>
+                           <FontAwesomeIcon icon={faBagShopping}></FontAwesomeIcon>
                     </li>
                 </ul>
                 
                 </div>
             </div>
             </nav>
+
+
+            <div className="search-box">
+                <h1>search</h1>
+            </div>
         </>
     );
 };

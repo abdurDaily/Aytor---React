@@ -4,6 +4,7 @@ import Navbar from './assets/components/nav/Navbar'
 import Hero from './assets/components/home/Hero'
 import Footer from './assets/components/home/Footer'
 import About from './assets/components/home/About'
+import './App.css';
 
 
 function App() {
@@ -17,11 +18,14 @@ function App() {
 
 
 
+
       <Routes>
          <Route path="/hero" element={<Hero />} />
-         <Route path="/footer" element={<Footer />} />
          <Route path="/about" element={<About />} />
       </Routes>
+
+
+      <Footer />
     </BrowserRouter>
     </>
   )
