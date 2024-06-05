@@ -1,15 +1,17 @@
-import React from 'react';
-import Navbar from '../nav/Navbar';
+import React, { useRef } from 'react';
+import Test from './Test';
 
 const About = () => {
+    let headRemove = useRef();
+    const removeBtn = () => {
+        headRemove.current.style.display = "none";
+        // alert('remove');
+    }
     return (
-        <>
-            <section>
-                <div className="container mt-5">
-                    <h1>Aytor  {'>'}  About</h1>
-                </div>
-            </section>
-        </>
+        <div>
+            <h1 ref={headRemove}>testing....</h1>
+            <Test remove={ removeBtn } />
+        </div>
     );
 };
 
