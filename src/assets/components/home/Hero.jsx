@@ -16,7 +16,7 @@ const Hero = () => {
                 <div className="container">
                     <div className="row ">
 
-                        <div className="col-lg-6">
+                        <div className="col-lg-5">
                             <div className="row g-4">
                                 <div className="col-lg-12 home-card">
                                     <img className='img-fluid w-100 h-100' src="public/images/home/product-1.png" alt="" />
@@ -37,7 +37,7 @@ const Hero = () => {
                             </div>
                         </div>
 
-                        <div className="col-lg-6">
+                        <div className="col-lg-7">
                             <img className='w-100 h-100' style={{ objectFit:'cover' }} src="public/images/home/product-2.png" alt="" />
                         </div>
 

@@ -2,7 +2,9 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars,faMagnifyingGlass, faHeart, faBagShopping,faLocationDot} from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
-
+import { FaShoppingBag, FaSearch  } from "react-icons/fa";
+import { MdBluetoothSearching } from "react-icons/md";
+import { RiSearchFill } from "react-icons/ri";
 
 
 
@@ -14,10 +16,10 @@ const Footer = () => {
                     <div className="row">
                         <div className="col-lg-3">
                             <ul style={{ display:'flex', listStyleType:'none', padding:'0' }}>
-                                <li className='text-light' style={{ marginRight:'10px', fontSize:'16px' }}><FontAwesomeIcon icon={faBagShopping} /></li>
-                                <li className='text-light' style={{ marginRight:'10px', fontSize:'16px' }}><FontAwesomeIcon icon={faBagShopping} /></li>
-                                <li className='text-light' style={{ marginRight:'10px', fontSize:'16px' }}><FontAwesomeIcon icon={faBagShopping} /></li>
-                                <li className='text-light' style={{ marginRight:'10px', fontSize:'16px' }}><FontAwesomeIcon icon={faBagShopping} /></li>
+                                <li className='text-light' style={{ marginRight:'10px', fontSize:'16px' }}><FaShoppingBag /></li>
+                                <li className='text-light' style={{ marginRight:'10px', fontSize:'16px' }}><FaSearch /></li>
+                                <li className='text-light' style={{ marginRight:'10px', fontSize:'16px' }}><MdBluetoothSearching /></li>
+                                <li className='text-light' style={{ marginRight:'10px', fontSize:'16px' }}><RiSearchFill /></li>
                             </ul>
                         </div>
                         <div className="col-lg-6 text-lg-center">
@@ -53,6 +55,7 @@ const Footer = () => {
                         <div className="col-lg-2 text-light">
                             <h4 style={{ marginBottom:'20px' }}>Opening Time</h4>
                             <table>
+                                <tbody>
                                 <tr>
                                     <td style={{ width:"50%", fontSize:'14px' }}>Mon - Tue: </td>
                                     <td style={{ width:"50%", fontSize:'14px' }}>8AM - 10PM</td>
@@ -65,6 +68,7 @@ const Footer = () => {
                                     <td style={{ width:"50%", fontSize:'14px' }}>Mon: </td>
                                     <td style={{ width:"50%", fontSize:'14px' }}>8AM - 10PM</td>
                                 </tr>
+                                </tbody>
                                 
                             </table>
                         </div>
@@ -72,19 +76,22 @@ const Footer = () => {
                         <div className="col-lg-3 text-light">
                             <h4 style={{ marginBottom:'20px' }}>Opening Time</h4>
                             <table>
-                                <tr>
+                               <tbody>
+                               <tr>
                                     <td valign='top' style={{ width:"10%" }}><FontAwesomeIcon icon={faLocationDot} /></td>
-                                    <span>830 Broad way, New York, NY 10003, United States</span>
+                                    <td><span>830 Broad way, New York, NY 10003, United States</span></td>
                                 </tr>
                                 <tr>
                                     <td valign='top' style={{ width:"10%" }}><FontAwesomeIcon icon={faLocationDot} /></td>
-                                    <span>+18008660286</span>
+                                    <td><span>+18008660286</span></td>
                                 </tr>
                                 <tr>
                                     <td valign='top' style={{ width:"10%", padding:'5px 0 0 0' }}><FontAwesomeIcon icon={faLocationDot} /></td>
+                                    <td><p className='m-0 p-0'>aetor.info@gmail.com</p>
                                     <p className='m-0 p-0'>aetor.info@gmail.com</p>
-                                    <p className='m-0 p-0'>aetor.info@gmail.com</p>
+                                    </td>
                                 </tr>
+                               </tbody>
                                 
                             </table>
                         </div>

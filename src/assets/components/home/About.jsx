@@ -1,15 +1,24 @@
 import React from 'react';
-import Navbar from '../nav/Navbar';
+import { useState } from 'react';
 
 const About = () => {
+    let [myObj, setObjet] = useState({
+        one: '1',
+        two: '2',
+        three: '3',
+    });
+    let change = () => {
+        setObjet({
+            one: '...1',
+            two: '..2',
+            three: '..3',
+        })
+    }
     return (
-        <>
-            <section>
-                <div className="container mt-5">
-                    <h1>Aytor  {'>'}  About</h1>
-                </div>
-            </section>
-        </>
+        <div>
+            <h1>{ JSON.stringify(myObj) }</h1>
+            <button onClick={change}>click</button>
+        </div>
     );
 };
 

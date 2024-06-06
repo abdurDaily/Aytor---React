@@ -1,22 +1,38 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import { Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars,faMagnifyingGlass, faHeart, faBagShopping} from '@fortawesome/free-solid-svg-icons';
 
-let nav = document.querySelector('.navbar');
-window.addEventListener('scroll',function(){
-  if(window.scrollY > 200){
-    // this.alert('io')
-    // console.log(window.scrollY);
-    nav.classList.add('nav_active');
-  }
-});
+
 
 
 
 const Navbar = () => {
+    const [dark, setDark]  = useState(false);
+    useEffect(()=>{
+        let nav = document.querySelector('.navbar');
+        let initial = 0 ;
+        window.addEventListener('scroll',function(){
+            // console.log(nav);
+          if(window.scrollY < initial){
+               
+               nav.classList.add('nav_active');
+            }else{
+                nav.classList.remove('nav_active');
+            }
+          let current = window.scrollY;
+          initial = current;
+        });
+    }, [])
+
+    const toggleDarkMode = () => {
+        setDark(!dark)
+        document.querySelector('html').dataset.bsTheme=dark?'light':'dark'
+    }
+
+
     return (
         <>
             <nav className="navbar shadow navbar-expand-lg" style={{ background:'#fff' }}>
@@ -45,6 +61,7 @@ const Navbar = () => {
                         <Link className='nav-link' to="/about">About</Link> 
                     </li>
                     
+                    <li><button onClick={toggleDarkMode} className='btn btn-dark'>Dark Mode</button></li>
                 </ul>
 
 

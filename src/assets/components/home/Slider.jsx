@@ -1,6 +1,6 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination } from 'swiper/modules';
+import { Pagination, Autoplay} from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 
@@ -8,7 +8,11 @@ import 'swiper/css/pagination';
 const Slider = () => {
     return (
         <>
-      <Swiper pagination={true} modules={[Pagination]} className="mySwiper" style={{ height:'800px' }}>
+      <Swiper  loop={true} slidesPerView={1} autoplay={{
+          delay: 2000,
+          disableOnInteraction: true,
+        }}
+         modules={[Pagination, Autoplay]} className="mySwiper" style={{ height:'800px' }}>
          <div className="container">
             <SwiperSlide className='banner'>
                 <div className="container">
@@ -26,7 +30,6 @@ const Slider = () => {
                     <a href="">Shop Now</a>
                 </div>
             </SwiperSlide>
-
          </div>
       </Swiper>
     </>
